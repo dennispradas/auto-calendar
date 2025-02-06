@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->execute()) {
         echo "[INFO] Evento guardado correctamente.\n";
 
-        $command = escapeshellcmd("python3 /ruta/a/tu/script/create_google_event.py");
+        $command = escapeshellcmd("python3 query.py");
         $output = shell_exec($command);
 
         if ($output) {
