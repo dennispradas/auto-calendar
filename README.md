@@ -5,7 +5,13 @@ De moment et crea el esdeveniment al calendari general de l'usuari que inicia se
 Posar en marxa:
   El codi esta preparat per a funcionar directament, nomes s'ha de cambiar les dades de la BBDD a .py i .php
   Una vegada el codi s'hagi importat, i les credencials descarregades, s'ha d'executar .py per a inicar sessió a Google Calendar
-  
+
+DEPENDENCES
+- PIP: google-api-python-client
+- PIP: google-auth-httplib2
+- PIP: google-auth-oauthlib
+- PIP: mysql-connector-python
+ 
 API
   1. Registra una nova api calendar a https://console.cloud.google.com/
      - "Selecciona un proyecto"
