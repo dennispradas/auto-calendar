@@ -9,8 +9,8 @@ import os.path
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'local',
-    'password': 'dp3879dp',
-    'database': 'form'
+    'password': 'local',
+    'database': 'db'
 }
 
 # Alcances requeridos para Google Calendar API
