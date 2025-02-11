@@ -17,8 +17,6 @@ DB_CONFIG = {
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 def authenticate_google():
-    """Autenticar con Google Calendar API."""
-    print("[INFO] Autenticando con Google Calendar API...")
     creds = None
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
@@ -32,12 +30,9 @@ def authenticate_google():
             creds = flow.run_local_server(port=8080)
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
-    print("[INFO] Autenticación completada.")
     return creds
 
 def get_last_event():
-    """Obtener el último evento insertado en la base de datos."""
-    print("[INFO] Conectando a la base de datos...")
     connection = mysql.connector.connect(**DB_CONFIG)
     cursor = connection.cursor(dictionary=True)
     
@@ -49,16 +44,9 @@ def get_last_event():
     cursor.close()
     connection.close()
     
-    if event:
-        print("[INFO] Último evento obtenido:", event)
-    else:
-        print("[ERROR] No se encontró ningún evento.")
-    
     return event
 
 def create_google_event(event):
-    """Crear un evento en Google Calendar."""
-    print("[INFO] Creando evento en Google Calendar...")
     creds = authenticate_google()
     service = build('calendar', 'v3', credentials=creds)
 
@@ -75,7 +63,6 @@ def create_google_event(event):
 
     created_event = service.events().insert(calendarId='primary', body=event_data).execute()
     
-    print(f"[INFO] Evento creado: {created_event.get('htmlLink')}")
 
 if __name__ == '__main__':
     last_event = get_last_event()
