@@ -1,4 +1,4 @@
-Formulari php que crea un esdeveniment de google calendar a partir de la query SQL
+Formulari php que crea un esdeveniment de google calendar a partir de la ultima query SQL
 
 De moment et crea el esdeveniment al calendari general de l'usuari que inicia sessió al pas 3
 
