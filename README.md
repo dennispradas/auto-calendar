@@ -50,3 +50,6 @@ S'han de configurar les linees:
   TO_EMAIL = ['',''] # Email dels destinataris
 ```
 
+# Com afegir el .ics?
+
+Es tan facil com fer click en l'arxiu del correu, i a la barra de sobre ja surt un botó per a afegir al calendari
