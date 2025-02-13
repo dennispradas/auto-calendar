@@ -1,14 +1,20 @@
 Codi per a enviar correus via microsoft SMTP
 
 DEPENDENCIES PIP:
+    
     mysql-connector-python 
     icalendar
 
 FUNCIÓ:
+    
     En executar llegeix dins de la sql, l'última entrada, la importa, crea un arxiu .ics i l'adjunta al correu
+    
     Utilitza la llibreria d'SMTP, i envia el correu al servidor SMTP d'Outlook
+    
     No necessita de cap API, tot el necessari es alla.
+    
     Per a integrar-ho al formulari, només s'hauria de posar una linea que l'executés i ell mateix fa sol
+    
     Es necessari configurar les linees:
 
     DB_CONFIG = {
